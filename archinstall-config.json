@@ -1,0 +1,115 @@
+{
+  "bootloader": "grub",
+  "disk_config": {
+    "device_modifications": [
+      {
+        "device": "/dev/nvme0n1",
+        "partitions": [
+          {
+            "boot": true,
+            "esp": true,
+            "mountpoint": "/boot",
+            "size": "1GiB",
+            "type": "fat32",
+            "wipe": true
+          },
+          {
+            "mountpoint": "swap",
+            "size": "4GiB",
+            "type": "swap",
+            "wipe": true
+          },
+          {
+            "mountpoint": "/",
+            "size": "100%",
+            "type": "ext4",
+            "wipe": true
+          }
+        ],
+        "wipe": true
+      }
+    ]
+  },
+  "hostname": "archpad",
+  "kernels": [
+    "linux"
+  ],
+  "keyboard_layout": "us",
+  "locale_config": {
+    "kb_layout": "us",
+    "sys_enc": "UTF-8",
+    "sys_lang": "C.UTF-8"
+  },
+  "timezone": "Asia/Tokyo",
+  "ntp": true,
+  "packages": [
+    "base",
+    "base-devel",
+    "linux-firmware",
+    "amd-ucode",
+    "intel-ucode",
+    "networkmanager",
+    "nm-connection-editor",
+    "fish",
+    "sudo",
+    "openssh",
+    "git",
+    "neovim",
+    "htop",
+    "bat",
+    "eza",
+    "fzf",
+    "starship",
+    "tmux",
+    "alacritty",
+    "hyprland",
+    "hyprcursor",
+    "hypridle",
+    "hyprlock",
+    "hyprpaper",
+    "hyprpicker",
+    "greetd",
+    "greetd-agreety",
+    "swaync",
+    "swww",
+    "pipewire",
+    "pipewire-pulse",
+    "pipewire-jack",
+    "wireplumber",
+    "easyeffects",
+    "bluez",
+    "bluez-utils",
+    "brightnessctl",
+    "ufw",
+    "cifs-utils",
+    "python",
+    "python-pip",
+    "meson",
+    "cmake",
+    "ninja",
+    "gcc",
+    "clang",
+    "go",
+    "nodejs",
+    "npm",
+    "rustup",
+    "vim",
+    "emacs",
+    "gimp",
+    "blender",
+    "firefox",
+    "chromium",
+    "qbittorrent",
+    "vlc",
+    "mpv",
+    "telegram-desktop",
+    "syncthing",
+    "rclone",
+    "restic",
+    "keepass",
+    "docker",
+    "libvirt",
+    "virt-manager",
+    "qemu-base"
+  ]
+}
